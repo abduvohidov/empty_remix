@@ -5,11 +5,10 @@
   "type": "module",
   "scripts": {
     "build": "remix build",
-    "dev": "concurrently \"npm run sass\" \"remix dev\"",
+    "dev": "remix dev --manual",
     "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
     "start": "remix-serve ./build/index.js",
-    "typecheck": "tsc",
-    "sass": "sass --watch app/:app/"
+    "typecheck": "tsc"
   },
   "dependencies": {
     "@remix-run/css-bundle": "^2.4.1",
@@ -34,7 +33,6 @@
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "sass": "^1.69.7",
     "typescript": "^5.1.6",
     "webpack": "^5.89.0"
   },

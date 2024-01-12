@@ -1,4 +1,5 @@
-import type { LinksFunction } from "@remix-run/node"; // or cloudflare/deno
+import type { LinksFunction } from "@remix-run/node";
+import { cssBundleHref } from "@remix-run/css-bundle";
 import {
   Links,
   LiveReload,
@@ -8,13 +9,22 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
-import BootstrapCSS from "bootstrap/dist/css/bootstrap.min.css";
-
+import BootstrapCss from "bootstrap/dist/css/bootstrap.min.css";
+import GlobalCss from "./app/styles/gobal.css";
+import HomeMainCss from "./pages/Home/styles/main.css";
 
 export const links: LinksFunction = () => [
-  { 
-    rel: "stylesheet", 
-    href: BootstrapCSS 
+  {
+    rel: "stylesheet",
+    href: BootstrapCss,
+  },
+  {
+    rel: "stylesheet",
+    href: GlobalCss,
+  },
+  {
+    rel: "stylesheet",
+    href: HomeMainCss,
   },
 ];
 

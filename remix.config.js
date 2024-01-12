@@ -4,7 +4,7 @@ export default {
   appDirectory: "src",
   routes(defineRoutes) {
     return defineRoutes((route) => {
-      route("/", "routes/home/index.tsx", { index: true });
+      route("/", "app/routes/home/index.tsx", { index: true });
     });
   },
   // assetsBuildDirectory: "public/build",
